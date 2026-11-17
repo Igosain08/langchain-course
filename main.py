@@ -12,7 +12,7 @@ load_dotenv()
 
 
 def main():
-    agent= create_agent(tools=[TavilySearch()], model=ChatOpenAI(model="gpt-4o-mini", temperature=0.7))
+    agent= create_agent(tools=[TavilygitSearch()], model=ChatOpenAI(model="gpt-4o-mini", temperature=0.7))
     response = agent.invoke({"messages": [HumanMessage(content="search for 3 job postings for an ai engineer using langchain in the bay area on linkedin and list their details?")]})
     print(response)
 
